@@ -1,15 +1,10 @@
 #Find the value of inverse of a matrix, determinant of a matrix 
-
 Matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
-
 A = matrix(1:100, nrow=10)
-
 B = matrix(1:1000, nrow=10)
 
 #Transpose A and B  given a matrix or data.frame x, t returns the transpose of x. 
-
 t(A)
-
 t(B)
 
 #create two vectors (a)
@@ -21,6 +16,7 @@ S<- a%*%A
 
 #re-assign the vectors a and b to equal the number of rows of the column for the corresponding matrix
 D<- t(a)
+
 #Multiply the matrix by a matrix
 W<- S%*%D
 
