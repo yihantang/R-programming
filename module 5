@@ -1,7 +1,10 @@
 #Find the value of inverse of a matrix, determinant of a matrix 
-Matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
+matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
 A = matrix(1:100, nrow=10)
-B = matrix(1:1000, nrow=10)
+B = matrix(rep(1, 1000), nrow=10)
+
+A
+B
 
 #Transpose A and B  given a matrix or data.frame x, t returns the transpose of x. 
 t(A)
@@ -9,19 +12,44 @@ t(B)
 
 #create two vectors (a)
 a<- matrix(1:10, ncol=10)
+b<- matrix(rep(1, 1000), nrow= 100)
 
+a
+b
 
-#multiply matrices by vectors
-S<- a%*%A
+#multiply matrices by vectors --> change the matrices
+changeA <- a%*%A
+changeA
+
+#make matrixB become 10x10 matrix
+changeB <- B%*%b  
+changeB
+
+#check the the features of the matrices
+det(changeB)
+#find out det(changeB)=0 
+
+#change the determinant of changeB
+
+deterB <- a%*%changeB
+deterB
 
 #re-assign the vectors a and b to equal the number of rows of the column for the corresponding matrix
-D<- t(a)
+transpose_a <- t(a)
+transpose_a
 
 #Multiply the matrix by a matrix
-W<- S%*%D
+finalA <- changeA %*% transpose_a
+finalB <- deterB %*% transpose_a
+
+finalA
+finalB
 
 
 
 #Inverse a matrix
-det(W)
-solve(W)
+det(finalA)
+solve(finalA)
+det(finalB)
+solve(finalB)
+
