@@ -13,7 +13,7 @@ A-B
 x<-c(4,1,2,3)
 diag(x)
 
-#Generate the matrix 
+#Generate the diagonal matrix 
 y<- c( 0, 3, 3, 3, 3)
 
 A<-diag(y)
