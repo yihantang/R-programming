@@ -1,0 +1,26 @@
+#Input the file
+
+Assignment6 <- read.table(file.choose(), header=TRUE, sep = ",")
+
+#Run plyer generates for the mean of both Age and Grade split by gender
+
+install.packages("plyr")
+
+library(plyr)
+
+Assignment6.1 <- ddply(Assignment6, "Sex", transform, Grade.Average=mean(Grade))
+
+Assignment6.1
+
+#Print this to a file
+
+write.table(Assignment6.1, "Sorted_Average")
+
+write.table(Assignment6.1, "Sorted_Average", sep=",")
+
+#change the names in the given list for names that contain the letter
+i
+newAssignment6 <- subset(Assignment6,grepl("[iI]" ,Assignment6$Name))
+
+# make the new data frame in to a file
+write.table(newAssignment6, "DataSubset", sep=",")
