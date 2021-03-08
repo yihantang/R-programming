@@ -16,11 +16,14 @@ Assignment6.1
 
 write.table(Assignment6.1, "Sorted_Average")
 
-write.table(Assignment6.1, "Sorted_Average", sep=",")
+write.table(Assignment6.1, "Sorted_Averagecsv", sep=",")
 
-#change the names in the given list for names that contain the letter
+write.csv(Assignment6.1, "Sorted_Averagecsv.2")
+
+#filter the names in the given list for names that contain the letter
 i
 newAssignment6 <- subset(Assignment6,grepl("[iI]" ,Assignment6$Name))
 
 # make the new data frame in to a file
+
 write.table(newAssignment6, "DataSubset", sep=",")
