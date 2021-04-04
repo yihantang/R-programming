@@ -1,0 +1,27 @@
+---
+title: "R Markdown"
+author: "Yi-Han Tang"
+date: "2021/4/4"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+First input the dataset and summary the dataset
+```{r}
+humanpower1 <- read.csv(file.choose(), header = TRUE, sep = ",")
+View(humanpower1)
+summary(humanpower1)
+
+```
+
+```{r}
+plot(humanpower1$o2~humanpower1$id, xlab = "id", ylab = "o2", main=" id vs. o2 ")
+
+```
+
+```{r}
+library(ggplot2)
+g <- ggplot(humanpower1, aes( x = wattsPerKg, y = o2))
+g+ geom_point()
+```
