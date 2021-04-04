@@ -25,3 +25,10 @@ library(ggplot2)
 g <- ggplot(humanpower1, aes( x = wattsPerKg, y = o2))
 g+ geom_point()
 ```
+
+The mean of the o2 is `r mean(humanpower1$o2)`
+
+
+The mean of wattsPerKg is `r mean(humanpower1$wattsPerKg)`
+
+The end
